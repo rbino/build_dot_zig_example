@@ -6,6 +6,7 @@ defmodule BuildDotZigExample.MixProject do
       app: :build_dot_zig_example,
       version: "0.1.0",
       elixir: "~> 1.15",
+      compilers: [:build_dot_zig] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -21,8 +22,7 @@ defmodule BuildDotZigExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:build_dot_zig, "~> 0.4.2"}
     ]
   end
 end
