@@ -1,21 +1,17 @@
-# BuildDotZigExample
+# `:build_dot_zig` example
 
-**TODO: Add description**
+This is a small example of a NIF written in C and built using
+[`:build_dot_zig`](https://github.com/rbino/build_dot_zig).
 
-## Installation
+## License
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `build_dot_zig_example` to your list of dependencies in `mix.exs`:
+Copyright (c) 2023 Riccardo Binetti
 
-```elixir
-def deps do
-  [
-    {:build_dot_zig_example, "~> 0.1.0"}
-  ]
-end
-```
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in
+compliance with the License. You may obtain a copy of the License at
+https://www.apache.org/licenses/LICENSE-2.0
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/build_dot_zig_example>.
-
+Unless required by applicable law or agreed to in writing, software distributed under the License is
+distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. See the License for the specific language governing permissions and limitations under the
+License.
