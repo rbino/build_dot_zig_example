@@ -58,8 +58,6 @@ jobs:
         run: |
           mix deps.get --only test
           mix deps.compile
-          mix compile
-          ls _build/dev/lib/build_dot_zig_example/priv/host/lib/
 
       - name: Run tests
         run: mix test
