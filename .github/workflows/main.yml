@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  pull_request:
+  # Run when pushing to stable branches
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }} (Elixir ${{ matrix.elixir }}, OTP ${{ matrix.otp }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            otp: "26.1.2"
+            elixir: "1.15.7"
+          - os: windows-2022
+            otp: "26.1.2"
+            elixir: "1.15.7"
+          - os: macos-latest
+            otp: "26.1.2"
+            elixir: "1.15.7"
+
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install OTP and Elixir
+        if: runner.os != 'macOS'
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ matrix.otp }}
+          elixir-version: ${{ matrix.elixir }}
+
+      - name: Install OTP and Elixir
+        if: runner.os == 'macOS'
+        run: |
+          brew install elixir
+          mix local.hex --force
+
+      - name: Cache dependencies
+        id: cache-deps
+        uses: actions/cache@v2
+        with:
+          path: |
+            deps
+            _build
+          key: ${{ matrix.os }}-otp${{ matrix.otp }}-elixir${{ matrix.elixir }}-${{ hashFiles('**/mix.lock') }}
+
+      - name: Install and compile dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: |
+          mix deps.get --only test
+          mix deps.compile
+          mix compile
+          ls _build/dev/lib/build_dot_zig_example/priv/host/lib/
+
+      - name: Run tests
+        run: mix test
