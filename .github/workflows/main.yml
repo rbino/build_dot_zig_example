@@ -18,12 +18,21 @@ jobs:
           - os: ubuntu-22.04
             otp: "26.1.2"
             elixir: "1.15.7"
+          - os: ubuntu-22.04
+            otp: "27.0.1"
+            elixir: "1.17.2"
           - os: windows-2022
             otp: "26.1.2"
             elixir: "1.15.7"
+          - os: windows-2022
+            otp: "27.0.1"
+            elixir: "1.17.2"
           - os: macos-latest
             otp: "26.1.2"
             elixir: "1.15.7"
+          - os: macos-latest
+            otp: "27.0.1"
+            elixir: "1.17.2"
 
     steps:
       - name: Clone the repository
