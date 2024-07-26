@@ -22,7 +22,7 @@ defmodule BuildDotZigExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:build_dot_zig, "~> 0.4.2"}
+      {:build_dot_zig, github: "rbino/build_dot_zig"}
     ]
   end
 end
