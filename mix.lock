@@ -1,5 +1,5 @@
 %{
-  "build_dot_zig": {:hex, :build_dot_zig, "0.6.1", "b34cda588f95f1109a7574af8d448adc561180d1fdfa99f5e59698b729651889", [:mix], [{:castore, "~> 1.0", [hex: :castore, repo: "hexpm", optional: false]}, {:jason, "~> 1.4", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm", "8e5001cd85036ac7603bf983dc9a8fcc91880acb85343adc2366765c30aa302e"},
-  "castore": {:hex, :castore, "1.0.12", "053f0e32700cbec356280c0e835df425a3be4bc1e0627b714330ad9d0f05497f", [:mix], [], "hexpm", "3dca286b2186055ba0c9449b4e95b97bf1b57b47c1f2644555879e659960c224"},
+  "build_dot_zig": {:hex, :build_dot_zig, "0.6.2", "90730b02a47de7c2e128e5a899e0501234c6dfcc2e2dbcc05ecd5503f7910347", [:mix], [{:castore, "~> 1.0", [hex: :castore, repo: "hexpm", optional: false]}, {:jason, "~> 1.4", [hex: :jason, repo: "hexpm", optional: false]}], "hexpm", "f1d18d8ae9ef54b649f2f266b7b6137ef7d31ef5c69c3c8aac8a1bc4d783c02b"},
+  "castore": {:hex, :castore, "1.0.14", "4582dd7d630b48cf5e1ca8d3d42494db51e406b7ba704e81fbd401866366896a", [:mix], [], "hexpm", "7bc1b65249d31701393edaaac18ec8398d8974d52c647b7904d01b964137b9f4"},
   "jason": {:hex, :jason, "1.4.4", "b9226785a9aa77b6857ca22832cffa5d5011a667207eb2a0ad56adb5db443b8a", [:mix], [{:decimal, "~> 1.0 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "c5eb0cab91f094599f94d55bc63409236a8ec69a21a67814529e8d5f6cc90b3b"},
 }
