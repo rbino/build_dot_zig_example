@@ -32,11 +32,15 @@ pub fn build(b: *std.Build) void {
         break :blk b.run(&argv);
     };
 
-    const lib = b.addSharedLibrary(.{
-        .name = "math",
+    const mod = b.createModule(.{
         .target = target,
         .optimize = optimize,
         .link_libc = true,
+    });
+    const lib = b.addLibrary(.{
+        .name = "math",
+        .root_module = mod,
+        .linkage = .dynamic,
     });
     lib.addCSourceFile(.{
         .file = .{ .src_path = .{ .owner = b, .sub_path = "src/math.c" } },

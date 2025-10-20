@@ -22,7 +22,7 @@ defmodule BuildDotZigExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:build_dot_zig, "~> 0.6.0"}
+      {:build_dot_zig, "~> 0.7.0"}
     ]
   end
 end
